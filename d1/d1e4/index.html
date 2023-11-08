@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@400;500&family=Montserrat:ital,wght@0,200;0,300;0,400;1,200;1,300&display=swap" rel="stylesheet">
+    <title>Welcome!</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 98vh;
+        }
+
+        h1 {
+            margin-bottom: 5rem;
+        }
+
+        .centered-div {
+            font-weight: 300;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: rgb(36, 36, 36);
+            font-weight: 600;
+        }
+
+        .here:hover {
+            text-decoration: underline;
+            color: cornflowerblue;
+        }
+
+        p {
+            font-weight: 300;
+        }
+
+        footer {
+            font-weight: 300;
+            color: rgb(88, 88, 88);
+            position: absolute;
+            margin-top: 98vh;
+            margin-left: 100rem;
+        }
+
+        .field {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .input {
+            border-top: none;
+            border-right: none;
+            border-left: none;
+        }
+
+        .input:focus {
+            border-top: none;
+            border-right: none;
+            border-left: none;
+        }
+
+        .button {
+            margin-top: 20px;
+            align-items: center;
+            background-color: rgba(240, 240, 240, 0.26);
+            border: 1px solid #DFDFDF;
+            border-radius: 16px;
+            box-sizing: border-box;
+            color: #000000;
+            cursor: pointer;
+            display: flex;
+            font-family: Inter, sans-serif;
+            font-size: 18px;
+            justify-content: center;
+            line-height: 28px;
+            max-width: 70%;
+            padding: 14px 22px;
+            text-decoration: none;
+            transition: all .2s;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            width: 100%;
+            }
+
+        .button:active,
+        .button:hover {
+            outline: 0;
+        }
+
+        .button:hover {
+            background-color: #FFFFFF;
+            border-color: rgba(0, 0, 0, 0.19);
+        }
+
+
+
+    </style>
+
+    </style>
+</head>
+<body>
+    <div>
+        <h1>What's your name?</h1>
+
+        <form id="myForm">
+            <div class="field">
+                <input class="input" id="username" name="username" required>
+                <input class="button" type="submit" value="Send">
+            </div>
+            
+            
+        </form>
+        
+        <script>
+            // Aggiungi un gestore di eventi per il modulo di invio
+            document.getElementById("myForm").addEventListener("submit", function(event) {
+                // Ferma l'invio del modulo predefinito
+                event.preventDefault();
+    
+                // Ottieni il valore dello username inserito
+                var username = document.getElementById("username").value;
+    
+                // Costruisci il messaggio di benvenuto
+                var welcomeMessage = "Welcome, " + username;
+    
+                // Aggiorna il corpo della pagina con il messaggio di benvenuto
+                document.body.innerHTML = "<h1>" + welcomeMessage + "</h1>";
+            });
+        </script>
+    </div>
+</body>
+
+<footer class="footer">
+    © CodeKaito. All rights reserved 2023
+</footer>
+
+</html>

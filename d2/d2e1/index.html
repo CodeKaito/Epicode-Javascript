@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@400;500&family=Montserrat:ital,wght@0,200;0,300;0,400;1,200;1,300&display=swap" rel="stylesheet">
+    <title>Welcome!</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 98vh;
+        }
+
+        .centered-div {
+            font-weight: 300;
+            cursor: pointer;
+            text-decoration: none;
+            width: 1000px;
+        }
+
+        a {
+            text-decoration: none;
+            color: rgb(36, 36, 36);
+            font-weight: 600;
+        }
+
+        .here:hover {
+            text-decoration: underline;
+            color: cornflowerblue;
+        }
+
+        p {
+            font-weight: 300;
+        }
+
+        footer {
+            font-weight: 300;
+            color: rgb(88, 88, 88);
+            position: absolute;
+            margin-top: 98vh;
+            margin-left: 100rem;
+        }
+
+    </style>
+
+    </style>
+</head>
+<body>
+    <div>
+        <h1 class="centered-div">
+            Write a javascript program to check two numbers and return true if one of the number is 100 or if the sum of the two numbers is 100
+        </h1>
+
+        <form id="myForm">
+            <div class="field">
+                <input type="number" min="1" max="100" id="val1" name="val1">
+                <input type="number" min="1" max="100" id="val2" name="val1">
+                <input class="button" type="submit" value="Send">
+
+                <p id="result">Result</p>
+            </div>
+            
+        </form>
+
+        <script>
+            document.getElementById("myForm").addEventListener("submit", function(event) {
+                // Ferma l'invio del modulo predefinito
+                event.preventDefault();
+    
+                // Ottieni il valore dello username inserito
+                var val1 = parseInt(document.getElementById("val1").value);
+                var val2 = parseInt(document.getElementById("val2").value);
+
+                sum = parseInt(val1 + val2);
+
+                var result = (val1==100 || val2==100 || sum==100) ? true : false;
+
+                var resultMessage = "The result is: " + result;
+                var sumMessage = " The sum is: " + sum;
+                
+                document.getElementById("result").innerHTML = resultMessage + sumMessage;
+
+            });
+        </script>
+        
+    </div>
+</body>
+
+<footer class="footer">
+    © CodeKaito. All rights reserved 2023
+</footer>
+
+</html>

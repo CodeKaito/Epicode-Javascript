@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@400;500&family=Montserrat:ital,wght@0,200;0,300;0,400;1,200;1,300&display=swap" rel="stylesheet">
+    <title>Welcome!</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 98vh;
+        }
+
+        .centered-div {
+            font-weight: 300;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: rgb(36, 36, 36);
+            font-weight: 600;
+        }
+
+        .here:hover {
+            text-decoration: underline;
+            color: cornflowerblue;
+        }
+
+        p {
+            font-weight: 300;
+            justify-content: center;
+            text-align: center;
+            margin: 10px;
+        }
+
+        footer {
+            font-weight: 300;
+            color: rgb(88, 88, 88);
+            position: absolute;
+            margin-top: 98vh;
+            margin-left: 100rem;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .button {
+            --b: 3px;   /* border thickness */
+            --s: .45em; /* size of the corner */
+            --color: #373B44;
+            cursor: pointer;
+  
+            padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+            color: var(--color);
+            --_p: var(--s);
+            background:
+                conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+                var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+            transition: .3s linear, color 0s, background-color 0s;
+            outline: var(--b) solid #0000;
+            outline-offset: .6em;
+            font-size: 16px;
+
+            border: 0;
+
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            }
+
+            .button:hover,
+            .button:focus-visible{
+              --_p: 0px;
+              outline-color: var(--color);
+              outline-offset: .05em;
+            }
+
+            .button:active {
+              background: var(--color);
+              color: #fff;
+            }
+
+    </style>
+
+</head>
+<body>
+    <div>
+        <h1 class="centered-div">
+            <h2 class="centered-div">Demo JavaScript change paragraph</h2>
+
+            <p id="demo">A Paragraph</p>
+            <div class="button-container">
+                <button type="button" onclick="myFunction()" class="button">Try me</button>
+            </div>
+            
+        </h1>
+
+        <script>
+            function myFunction() {
+            document.getElementById("demo").innerHTML = "Paragraph changed.";
+}
+        </script>
+        
+    </div>
+</body>
+
+<footer class="footer">
+    © CodeKaito. All rights reserved 2023
+</footer>
+
+</html>

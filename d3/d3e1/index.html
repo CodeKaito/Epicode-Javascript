@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@400;500&family=Montserrat:ital,wght@0,200;0,300;0,400;1,200;1,300&display=swap" rel="stylesheet">
+    <title>Rock, Paper, Scissors game!</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 98vh;
+        }
+
+        .centered-div {
+            font-weight: 300;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: rgb(36, 36, 36);
+            font-weight: 600;
+        }
+
+        p {
+            font-weight: 300;
+        }
+
+        footer {
+            font-weight: 300;
+            color: rgb(88, 88, 88);
+            position: absolute;
+            margin-top: 98vh;
+            margin-left: 100rem;
+        }
+
+    </style>
+
+    </style>
+</head>
+<body>
+    <div>
+        <h1 class="centered-div">
+            Create a rock, paper, scissors game!
+        </h1>
+        <button onclick="playGame('rock')">Rock</button>
+        
+        
+        <button onclick="playGame('paper')">Paper</button>
+
+        <button onclick="playGame('scissors')">Scissors</button>
+
+        <script>
+            function playGame(playerMove) {
+                const computerMove = pickComputerMove();
+                console.log('Computer choice is ' + computerMove);
+
+                var result = '';
+                if (playerMove === 'scissors') {
+                    if (computerMove == 'rock') {
+                        result = 'You lose.';
+                    } else if (computerMove == 'paper') {
+                        result = 'You win.';
+                    } else if (computerMove == 'scissors') {
+                        result = 'A Tie.';
+                    }
+                    
+                } else if (playerMove === 'paper') {
+                    if (computerMove == 'rock') {
+                        result = 'You win.';
+                    } else if (computerMove == 'paper') {
+                        result = 'A tie.';
+                    } else if (computerMove == 'scissors') {
+                        result = 'You lose.';
+                    } 
+
+                } else if (playerMove === 'rock') {
+                    if (computerMove == 'rock') {
+                        result = 'A tie.';
+                    } else if (computerMove == 'paper') {
+                        result = 'You lose.';
+                    } else if (computerMove == 'scissors') {
+                        result = 'You win.';
+                    }  
+                }
+
+                alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}`);
+            }
+
+            function pickComputerMove() {
+                const randomNum = (Math.random()*3)+1;
+
+                var computerMove = '';
+
+                if (randomNum >= 1 && randomNum <= 2) {
+                    computerMove = 'rock';
+                } else if (randomNum >= 2 && randomNum <= 3) {
+                    computerMove = 'paper';
+                }else if (randomNum >= 3) {
+                    computerMove = 'scissors';
+                }
+
+                return computerMove;
+            }
+
+        </script>
+        
+    </div>
+</body>
+
+<footer class="footer">
+    © CodeKaito. All rights reserved 2023
+</footer>
+
+</html>

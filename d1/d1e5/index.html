@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@400;500&family=Montserrat:ital,wght@0,200;0,300;0,400;1,200;1,300&display=swap" rel="stylesheet">
+    <title>Welcome!</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 98vh;
+        }
+
+        .centered-div {
+            font-weight: 300;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: rgb(36, 36, 36);
+            font-weight: 600;
+        }
+
+        .here:hover {
+            text-decoration: underline;
+            color: cornflowerblue;
+        }
+
+        p {
+            font-weight: 300;
+        }
+
+        footer {
+            font-weight: 300;
+            color: rgb(88, 88, 88);
+            position: absolute;
+            margin-top: 98vh;
+            margin-left: 100rem;
+        }
+
+        .resizer {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  opacity: 0;
+  resize: both;
+  cursor: grab;
+}
+
+.wrap {
+  width: min-content;
+  position: relative;
+}
+.x {
+  pointer-events: none;
+  position: absolute;
+  bottom: -10px;
+  left: calc(100% - 20px);
+  line-height: 0;
+  color: red;
+  font-size: 50px;
+  cursor: grab;
+}
+.x span {
+  white-space: nowrap;
+  vertical-align: middle;
+  color: black;
+  text-transform: uppercase;
+  font: 600 15px/1 system-ui, sans-serif;
+  display: inline-block;
+  transform: translate(45px, -10px);
+}
+
+    </style>
+
+    </style>
+</head>
+<body>
+    <div>
+        <h1 class="centered-div">
+            Welcome to the folder #Javascript!
+        </h1>
+
+        <div class="wrap">
+            <div class="resizer"></div>
+          
+            <div class="x">
+              ✖
+              <span>drag the spot!</span>
+            </div>
+          </div>
+        
+    </div>
+</body>
+
+<footer class="footer">
+    © CodeKaito. All rights reserved 2023
+</footer>
+
+</html>
