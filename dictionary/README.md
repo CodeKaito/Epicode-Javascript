@@ -15,6 +15,8 @@
 - .fill()
 - .slice()
 - .reverse()
+- .repeat()
+    - Returns a new string which contains the specified number of copies of this string, concatenated together.
 - .push()
 - .pop()
 - .shift()
