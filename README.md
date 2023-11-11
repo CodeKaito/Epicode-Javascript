@@ -1,2 +1,2 @@
 # Epicode-Javascript
-Extended Epicode's repository (only Javascript)
+Extended Epicode's repository (only Javascript).
