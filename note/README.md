@@ -184,6 +184,7 @@ In questo esempio, `String()` viene utilizzato come costruttore per creare un og
 ```javascript
 let booleano = true;
 let stringaBooleano = String(booleano);
+let string = booleano != 
 
 console.log(stringaBooleano); // Stampa: "true"
 ```
@@ -204,3 +205,4 @@ console.log(stringa); // Stampa: "Il numero è: 42"
 In questo caso, JavaScript converte automaticamente il numero in una stringa prima di concatenarlo alla stringa.
 
 In generale, `String()` è utile quando si desidera esplicitamente convertire un valore in una stringa. Tuttavia, nelle situazioni comuni, JavaScript gestirà la conversione implicita in stringa quando necessario.
+
