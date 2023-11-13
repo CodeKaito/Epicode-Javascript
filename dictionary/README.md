@@ -14,6 +14,9 @@
 - .findIndex()
 - .fill()
 - .slice()
+    -  Method also returns a substring of a string based on the index numbers provided as arguments.
+- .substring()
+    - This method returns a substring of a string based on the index numbers provided as arguments
 - .reverse()
 - .repeat()
     - Returns a new string which contains the specified number of copies of this string, concatenated together.
