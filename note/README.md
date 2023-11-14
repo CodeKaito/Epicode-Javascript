@@ -184,6 +184,7 @@ In questo esempio, `String()` viene utilizzato come costruttore per creare un og
 ```javascript
 let booleano = true;
 let stringaBooleano = String(booleano);
+let string = booleano != 
 
 console.log(stringaBooleano); // Stampa: "true"
 ```
@@ -204,3 +205,42 @@ console.log(stringa); // Stampa: "Il numero è: 42"
 In questo caso, JavaScript converte automaticamente il numero in una stringa prima di concatenarlo alla stringa.
 
 In generale, `String()` è utile quando si desidera esplicitamente convertire un valore in una stringa. Tuttavia, nelle situazioni comuni, JavaScript gestirà la conversione implicita in stringa quando necessario.
+
+### FOR LOOPS BREAKS AND CONTINUE
+
+- **Continue:**
+  - Quando si incontra il comando `continue` all'interno di un ciclo `for`, viene saltata l'esecuzione delle istruzioni rimanenti nel blocco di codice del ciclo per l'iterazione corrente.
+  - Il controllo passa direttamente alla prossima iterazione del ciclo.
+  - Può essere utile se, ad esempio, si desidera saltare alcune iterazioni basate su una condizione specifica.
+
+Ecco un esempio:
+
+```javascript
+for (let i = 0; i < 5; i++) {
+  if (i === 2) {
+    continue; // Salta l'iterazione corrente quando i è uguale a 2
+  }
+  console.log(i);
+}
+```
+
+In questo caso, la console stamperebbe 0, 1, 3, 4, poiché l'iterazione con `i` uguale a 2 viene saltata.
+
+- **Break:**
+  - Il comando `break` viene utilizzato per interrompere immediatamente l'esecuzione del ciclo quando una determinata condizione è verificata.
+  - Dopo aver incontrato `break`, il controllo esce completamente dal ciclo, ignorando le iterazioni rimanenti.
+
+Ecco un esempio:
+
+```javascript
+for (let i = 0; i < 5; i++) {
+  if (i === 3) {
+    break; // Interrompe il ciclo quando i è uguale a 3
+  }
+  console.log(i);
+}
+```
+
+In questo caso, la console stamperebbe solo 0, 1, 2, poiché il ciclo viene interrotto quando `i` diventa 3.
+
+Spero che questo chiarisca come funzionano `continue` e `break` nei cicli `for` di JavaScript!

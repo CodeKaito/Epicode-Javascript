@@ -13,8 +13,3 @@
 //     console.log(count);
 //     count-=1;
 // }
-
-// const pace = [4,2,2,2,3]
-// pace.push(3, 4);
-// console.log(pace);
-
