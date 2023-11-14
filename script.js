@@ -8,8 +8,13 @@
 //   return accumulator;
 // }, {});
 
-let count = 15;
-while (count > 0) {
-    console.log(count);
-    count-=1;
-}
+// let count = 15;
+// while (count > 0) {
+//     console.log(count);
+//     count-=1;
+// }
+
+// const pace = [4,2,2,2,3]
+// pace.push(3, 4);
+// console.log(pace);
+
