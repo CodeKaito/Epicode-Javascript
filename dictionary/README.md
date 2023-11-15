@@ -10,6 +10,7 @@
 - .includes()
 - .join()
 - .reduce()
+    - The reduce method in JavaScript is used to reduce the elements of an array to a single value. It iterates over each element of the array and applies a callback function to accumulate a result, which is the final output.
 - .find()
 - .findIndex()
 - .fill()
