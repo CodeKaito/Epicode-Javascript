@@ -96,13 +96,37 @@
 //   in caso di perdita dovrà essere mostrato il messaggio "Mi dispiace, hai perso!".
 //   (generazione numeri random https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random)
 
-// function tombolaMagica(randomArray, chosenArray) {
+function tombolaMagica(randomArray, chosenArray) {
+    let resultArray = [];
+    for (let i = 0; i < chosenArray.length; i++) {
+        if (randomArray.includes(chosenArray[i]) === true) {
+            resultArray.push(chosenArray[i]);
+        }
+    }
 
-// }
+    if (resultArray.length === 0 || resultArray.length === 1) {
+        console.log("Ritenta, sarai piú fortunato!");
+    } else if (resultArray.length === 2) {
+        console.log(resultArray + " AMBO!");
+    } else if (resultArray.length === 3) {
+        console.log(resultArray + " TERNA!");
+    } else if (resultArray.length === 4) {
+        console.log(resultArray + " QUATERNA");
+    } else if (resultArray.length === 5) {
+        console.log(resultArray + "CINQUINA!");
+    } else if (resultArray.length === chosenArray.length) {
+        console.log(resultArray + "TOMBOLA!");
+    }
+}
 
-let randomArray = [];
-randomArray.length = 10;
-     for (let i = 0; i < randomArray.length; i++) {
-         randomArray.push(Math.floor(Math.random()*90));
+function rand() {
+    let randomArray = [];
+     for (let i = 0; i < 10; i++) {
+        randomArray.push(Math.floor(Math.random()*90));
      }
-console.log(randomArray);
+     return randomArray;
+}
+
+let computer = rand();
+let user = [1, 10, 25, 12, 32, 45, 90, 39, 67, 42]
+tombolaMagica(computer, user);
