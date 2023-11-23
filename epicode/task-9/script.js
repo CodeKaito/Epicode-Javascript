@@ -19,62 +19,51 @@ function crazySum(first, second) {
     Scrivi una funzione chiamata "reverseString", che accetta una stringa come parametro e la ritorna invertita (es.: EPICODE => EDOCIPE).
    */
    
-   function reverseString(string) {
-    let newArray = [];
-    let result = '';
-    for (let i = string.length - 1; i >= 0; i--) {
-        newArray.push(string[i]);
-        result = newArray.join('');
-    };
-    return result;
-   }
-
-//    let string = "hello";
-//    console.log(string[string.length - 1]);
+    function reverseString(inputString) {
+        if (typeof inputString !== "string") {
+          console.log("Input errato, inserisci una stringa");
+          return; // Exit the function if input is not a string
+        }
+      
+        let newArray = [];
+        for (let i = inputString.length - 1; i >= 0; i--) {
+          newArray.push(inputString[i]);
+        }
+      
+        return newArray.join('');
+      }
    
    /* ESERCIZIO 4
     Scrivi una funzione chiamata "upperFirst", che accetta una stringa come parametro e la ritorna rendendo maiuscola ogni lettera iniziale di ogni parola.
    */
    
-//    function upperFirst(string) {
-//     const posizioneSpace = string.indexOf(' ');
-//     const posizioneAfterSpace = posizioneSpace +1;
-//     for (let i = 0; i < string.length; i++) {
-//         if (string[0] === string[0].toUpperCase()) {
-//             console.log(string[0].toUpperCase());
-//         } else if (string[posizioneAfterSpace]) {
-//             console.log(string[posizioneAfterSpace].toUpperCase());
-//         }
-//         }
-//     }
-
-    // upperFirst("string hello");
-    function upperFirst2(string) {
-        const posizioneSpace = string.indexOf(' ');
-        if (posizioneSpace !== -1) {
-            // Se c'è uno spazio nella stringa
-            const posizioneAfterSpace = posizioneSpace + 1;
-            string = string.charAt(0).toUpperCase() + string.slice(1, posizioneAfterSpace) + string.charAt(posizioneAfterSpace).toUpperCase() + string.slice(posizioneAfterSpace + 1);
-        } else {
-            // Se non c'è uno spazio nella stringa
-            string = string.charAt(0).toUpperCase() + string.slice(1);
+   function upperFirst(inputString) {
+    if (typeof inputString !== "string") {
+          console.log("Input errato, inserisci una stringa");
+          return; // Exit the function if input is not a string
         }
-    
-        return string;
-    }
+       let array = inputString.split(` `);
+       let result = [];
+       for (let i = 0; i < array.length; i++) {
+            result.push(array[i][0].toUpperCase() + array[i].slice(1));
+       }
+       return result.join(" ");
+   }
+
+   let output = upperFirst("grazie mille vinz");
+   console.log(output);
    
    /* ESERCIZIO 5
     Scrivi una funzione chiamata "giveMeRandom", che accetta come parametro un numero chiamato n e ritorna un array contenente n numeri random contenuti tra 0 e 10.
    */
    
-   
-    function giveMeRandom(n) {
-        let result = [];
-        for (let i = 0; i < n; i++) {
-            result.push(Math.floor(Math.random()*10));
-        } 
-        return result;
-    }
+   function giveMeRandom(n) {
+           let result = [];
+           for (let i = 0; i < n; i++) {
+               result.push(Math.floor(Math.random()*10));
+           } 
+           return result;
+       }
    
    //EXTRA:
    /* ESERCIZIO 1
@@ -91,62 +80,41 @@ function crazySum(first, second) {
    */
    
    function crazyDiff(input) {
-    let calc = Math.abs(input - 19);
-    return (calc > 19) ?  calc*3 : calc;
-   }
+       let calc = Math.abs(input - 19);
+       return (calc > 19) ?  calc*3 : calc;
+      }
    
    /* ESERCIZIO 3
     Scrivi una funzione chiamata "codify" che accetta una stringa come parametro.
     La funzione deve aggiungere la parola "code" all'inizio della stringa fornita e ritornare il risultato, ma se la stringa fornita comincia proprio con "code" allora deve ritornarla senza modifiche.
    */
    
-//    function codify(input) {
-//     const string = "code";
-//     return (input.includes(string) && input.charAt(0) === "c" && input.charAt(1) === "o" && input.charAt(2) === "d" && input.charAt(3) === "e") 
-//     ? input : string + input;
-//    }
-
-//    function codify(input) {
-//     const string = "code";
-//     return (input.startsWith(string)) ? input : string + input;
-//     }
-
-//     let result = codify("coqdeswmarco");
-//     console.log(result);
-
-/* ESERCIZIO 4
+   function codify(input) {
+       const string = "code";
+       return (input.startsWith(string)) ? input : string + input;
+    }
+   
+   /* ESERCIZIO 4
     Scrivi una funzione chiamata "check3and7" la quale accetta un numero intero positivo come parametro.
     La funzione deve controllare che tale parametro sia un multiplo di 3 o di 7, e in tal caso tornare true; altrimenti deve tornare false.
     SUGGERIMENTO: operatore modulo
    */
    
-   /* SCRIVI QUI LA TUA RISPOSTA */
+   function check3and7(num) {
+    if (typeof num === "number") { 
+     return (num%3 === 0 || num%7 === 0) ? true : false;
+    } else {
+     console.log("Errore, inserisci un numero");
+    }
+   }
    
    /* ESERCIZIO 5
     Scrivi una funzione chiamata "cutString", che accetta una stringa come parametro e la ritorna senza il primo e l'ultimo carattere.
    */
    
-    // function cutString(string) {
-    //     if (typeof string !== "string") {
-    //         return console.log("Errore, inserisci una stringa");
-    //     }
-
-    //     return string.slice(1, string.length - 1);
-    // }
-
-    // let output = cutString('bellissimo');
-    // console.log(output);
-
-    // function findNeedle(haystack) {
-    //     if (haystack.includes("needle")) {
-    //         let position = haystack.indexOf("needle");
-    //         return "found the needle at position " + position;
-    //     }
-    // }
-
-    // let output =  findNeedle(["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"])
-    // console.log(output);
-
-
-
-
+   function cutString(string) {
+    if (typeof string !== "string") {
+       return console.log("Errore, inserisci una stringa");
+        }
+        return string.slice(1, string.length - 1);
+   }
