@@ -49,9 +49,6 @@ function crazySum(first, second) {
        }
        return result.join(" ");
    }
-
-   let output = upperFirst("grazie mille vinz");
-   console.log(output);
    
    /* ESERCIZIO 5
     Scrivi una funzione chiamata "giveMeRandom", che accetta come parametro un numero chiamato n e ritorna un array contenente n numeri random contenuti tra 0 e 10.
@@ -118,3 +115,23 @@ function crazySum(first, second) {
         }
         return string.slice(1, string.length - 1);
    }
+
+  //  const cutString = string => {
+  //   if (typeof string !== "string") {
+  //     console.log("Errore, inserisci una stringa");
+  //     return;
+  //   }
+  //   return string.slice(1, -1);
+  // };
+
+  // const cutString = string => typeof string === "string" ? string.slice(1, -1) : console.log("Errore, inserisci una stringa");
+
+  const numbers = [1, 2, 3, 4, 5];
+
+  const sum = numbers.reduce((a, b) => {
+    console.log("accumulator: " + a);
+    console.log("currentValue: " + b)
+    return a + b;
+  }, 0);
+  
+  console.log(sum); // Output: 15
