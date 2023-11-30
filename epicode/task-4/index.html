@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Font opensans -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+    <!-- Medium Favicon -->
+    <link rel="shortcut icon" href="https://miro.medium.com/v2/1*m-R_BkNf1Qjr1YbyOIJY2w.png" type="image/x-icon" color="#171717">
+    <!-- Fontawesome href -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- css href -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Title of the webapp -->
+    <title>Medium</title>
+</head>
+<body>
+    <!-- Main container -->
+    <div class="container">
+    <!-- INIZIO NAVBAR -->    
+        <!-- Per fare il shadow completo della navbar dovevo creare un div padre che prendesse l'intera width dello schermo -->
+        <div class="navbar-bottomline">
+            <!-- Contenitore della navbar in alto -->
+            <div class="navbar">
+                <!-- Ho suddiviso le due parti della navbar di modo da dare un justify-content space-between o space-around -->
+    <!-- INIZIO NAVBAR SINISTRO CHE COMPRENDE IL LOGO DI MEDIUM             -->
+                <div class="navbar-leftside">
+                    <!-- Logo di medium -->
+                    <div class="logo-container">
+                        <!-- Ho preso un logo png di Medium da google -->
+                        <img src="https://github.com/CodeKaito/Epicode-task-4/blob/main/assets/medium.png?raw=true" alt="medium-logo-navbar" class="logo">
+                    </div>
+                </div>
+    <!-- FINE NAVBAR SINISTRO CHE COMPRENDE IL LOGO DI MEDIUM -->
+    
+    <!-- INIZIO NAVBAR DESTRO CHE COMPRENDE LA RICERCA, I POST SALVATI, LE NOTIFICHE E IL LOGO DELL'UTENTE -->
+                <!-- Navbar destro influenzato dal justify-content del padre navbar -->
+                <div class="navbar-rightside">
+                    <!-- Contenitore del fontawesome della ricerca -->
+                    <div class="magnifying-glass-container">
+                        <!-- Fontawesome della ricerca -->
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <!-- Contenitore del fontasweome dei post salvati -->
+                    <div class="bookmark-container-navbar">
+                        <!-- FOntawesome dei post salvati -->
+                        <i class="fa-regular fa-bookmark bookmark-navbar"></i>
+                    </div>
+                    <!-- Contenitore del fontawesome delle notifiche -->
+                    <div class="bell-container">
+                        <!-- Fontawesome delle notifiche -->
+                        <i class="fa-regular fa-bell bell"></i>
+                    </div>
+                    <!-- Pulsante a sinistra dell'immagine utente che invita a riabbonarsi alla membership di Medium -->
+                    <button type="button" class="button-navbar">Resume Membership</button>
+                    <!-- Contenitore dell'immagine utente -->
+                    <div class="user-container">
+                        <!-- Immagine utente -->
+                        <img src="https://miro.medium.com/v2/resize:fill:64:64/0*PpD4mtEoU_s7mxzn" alt="user-logo" class="user-logo">
+                    </div>
+                </div>
+    <!-- FINE NAVBAR DESTRO CHE COMPRENDE LA RICERCA, I POST SALVATI, LE NOTIFICHE E IL LOGO DELL'UTENTE -->            
+            </div>
+        </div>
+    <!-- FINE NAVBAR -->     
+
+    <!-- INIZIO DEL CORPO DELLA HOMEPAGE -->
+        <!-- Creato container di homepage per delineare la massima spaziature di width -->
+        <div class="homepage-container">
+            <!-- La homepage racchiude la regola di spaziatura dei componenti di destra e sinistra con un display flex e justify content space-evenly -->
+            <div class="homepage">
+    <!-- INIZIO LATO SINISTRO DELLA HOMEPAGE -->
+                <main>
+                    <!-- Creato div vuoto per dare spazio alla topbar container -->
+    <!-- INIZIO TOPBAR STICKY -->
+                    <div class="space-topbar"></div>
+                        <!-- Container della topbar sticky -->
+                        <div class="topbar-container">
+                            <!-- Contenitore degli elementi +, Following e Recommended for you -->
+                            <div class="topbar">
+                                <!-- Fontawesome del "+" -->
+                                <i class="fa-solid fa-plus"></i>
+                                <p>Following</p>
+                                <!-- Assegnato id selected-p per la linea piú scura in basso -->
+                                <p id="selected-p">Recommended for you</p>
+                            </div>
+                        </div>
+    <!-- INIZIO DEL FEED -->
+                    <!-- Feed container contiene tutto il feed, oltre al padding dal top -->
+                    <div class="feed-container">
+    <!-- INIZIO DEL SINGOLO ARTICOLO DEL FEED -->
+                        <!-- Div che contiene tutto l'articolo e le spaziature dagli altri articoli -->
+                        <div class="article-container">
+                            <!-- Author container contiene l'immagine dell'autore del feed, il suo nome e il suo titolo -->
+                            <div class="author-container">
+                                <!-- Container dell'immagine dell'autore dell'articolo -->
+                                <div class="author-image-container">
+                                    <!-- Immagine autore dell'articolo -->
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Elon_Musk_Colorado_2022_%28cropped2%29.jpg" alt="author-image" class="author-image">
+                                </div>
+                                <!-- Nome dell'autore e il suo titolo -->
+                                <p class="author-name"><span class="bold">Elon Musk</span>  👨‍💼 <span>CEO @Tesla&Space-X</span></p>
+                            </div>
+                            <!-- Div che contiene il corpus del feed e l'immagine dell'articolo -->
+                            <div class="article">
+                                <!-- Il corpus del feed -->
+                                <div class="feed">
+                                    <!-- Il corpus del feed (solo titolo e descrizione) -->
+                                    <div class="feed-topside">
+                                        <!-- Container del titolo del feed -->
+                                        <div class="feed-title-container">
+                                            <!-- Titolo del feed -->
+                                            <h3 class="feed-title">Elon Musk will do a live interview with British Prime Minister Rishi Sunak / The two will discuss the safety of using Artificial Intelligence.</h3>
+                                        </div>
+                                        <!-- Container della descrizione del feed -->
+                                        <!-- Descrizione del feed -->
+                                        <div class="feed-description-container">
+                                            <p class="feed-description">Would you abandon your bank for X? —  A wrecking ball is coming for banks. Not from emerging fintechs. Not from traditional banks. Not from global regulators. But because Elon Musk is back with PayPal’s original playbook. Elon just gave X employees one year to replace your bank. 20 years after drafting PayPal’s strategy, Elon wants to outdo it. PayPal is in for a fight. Not from banks. Not…</p>
+                                        </div>
+                                    </div>
+                                    <!-- Corpus del feed (tag in basso al feed) -->
+                                    <div class="feed-bottomside">
+                                        <!-- Container dei tag -->
+                                        <div class="tag-container">
+                                            <!-- Ho suddiviso i tag in 2 parti di modo da dare il justify content -->
+                                            <div class="left-side">
+                                                <!-- La data del feed -->
+                                                <p class="author-date">
+                                                    <span>Nov 3</span>
+                                                    <span class="dot">.</span>
+                                                    <span>3 min read</span>
+                                                    <span class="dot">.</span>
+                                                </p>
+                                                <!-- Il tag del feed -->
+                                                <div class="tag">
+                                                    <p>Elon Musk</p>
+                                                </div>
+                                                <span class="dot">.</span>
+                                                <p>Popular on Medium</p>
+                                                <span class="dot">.</span>
+                                                <svg width="16" height="16" viewBox="0 0 64 64" fill="none" class="qz afj"><path d="M39.64 40.83L33.87 56.7a1.99 1.99 0 0 1-3.74 0l-5.77-15.87a2.02 2.02 0 0 0-1.2-1.2L7.3 33.88a1.99 1.99 0 0 1 0-3.74l15.87-5.77a2.02 2.02 0 0 0 1.2-1.2L30.12 7.3a1.99 1.99 0 0 1 3.74 0l5.77 15.87a2.02 2.02 0 0 0 1.2 1.2l15.86 5.76a1.99 1.99 0 0 1 0 3.74l-15.87 5.77a2.02 2.02 0 0 0-1.2 1.2z" fill="#FFC017"></path></svg>
+                                                <p class="member">Member-only</p>
+                                            </div>
+                                            <!-- Container delle icone del bookmark e i 3 puntini -->
+                                            <div class="right-side">
+                                                <!-- Container del bookmark -->
+                                                <div class="bookmark-container">
+                                                    <!-- Fontawesome del bookmark -->
+                                                    <i class="fa-regular fa-bookmark fa-bookmark-tag"></i>
+                                                </div>
+                                                <!-- Container dei 3 puntini -->
+                                                <div class="ellipsis-container">
+                                                    <!-- Fontawesome dei 3 puntini -->
+                                                    <i class="fa-solid fa-ellipsis"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Chiusura div del corpus del feed -->
+                                <!-- Container dell'immagine del post -->
+                                <div class="image-feed-container">
+                                    <!-- L'immagine del post -->
+                                    <img src="https://miro.medium.com/v2/resize:fit:640/format:webp/1*Vr5pCPPW8hmL6cg_0dVESA.jpeg" alt="image-feed" class="image-feed" loading="lazy">
+                                </div>
+                            </div>
+                            <!-- Chiusura div del corpus del feed e l'immagine dell'articolo -->
+                        </div>
+                        <!-- Chiusura div che contiene tutto l'articolo e le spaziature dagli altri articoli -->
+    <!-- FINE DEL SINGOLO ARTICOLO DEL FEED -->
+    <!-- INIZIO DEL SINGOLO ARTICOLO DEL FEED -->
+                        <!-- Div che contiene tutto l'articolo e le spaziature dagli altri articoli -->
+                        <div class="article-container">
+                            <!-- Author container contiene l'immagine dell'autore del feed, il suo nome e il suo titolo -->
+                            <div class="author-container">
+                                <!-- Container dell'immagine dell'autore dell'articolo -->
+                                <div class="author-image-container">
+                                    <!-- Immagine autore dell'articolo -->
+                                    <img src="https://miro.medium.com/v2/resize:fill:48:48/1*97YUgQYxsyHO66CzJOWdCw@2x.jpeg" alt="author-image" class="author-image">
+                                </div>
+                                <!-- Nome dell'autore e il suo titolo -->
+                                <p class="author-name"><span class="bold">Jayden Levitt</span> in <span class="bold">Level Up Coding</span></p>
+                            </div>
+                            <!-- Div che contiene il corpus del feed e l'immagine dell'articolo -->
+                            <div class="article">
+                                <!-- Il corpus del feed -->
+                                <div class="feed">
+                                    <!-- Il corpus del feed (solo titolo e descrizione) -->
+                                    <div class="feed-topside">
+                                        <!-- Container del titolo del feed -->
+                                        <div class="feed-title-container">
+                                            <!-- Titolo del feed -->
+                                            <h3 class="feed-title">I Earned $5,795.00 From One Blog Post Using a Simple Strategy I See Few Writers Sharing.</h3>
+                                        </div>
+                                        <!-- Container della descrizione del feed -->
+                                        <!-- Descrizione del feed -->
+                                        <div class="feed-description-container">
+                                            <p class="feed-description">It’s a breeze to replicate. —  Recently, I wrote a blog that went to Valhalla. When it lit the touch paper, I thought my laptop was about to explode with the constant stream of notifications. It felt like bliss. A blog that had taken me four solid days to research and write generated 426k views and…</p>
+                                        </div>
+                                    </div>
+                                    <!-- Corpus del feed (tag in basso al feed) -->
+                                    <div class="feed-bottomside">
+                                        <!-- Container dei tag -->
+                                        <div class="tag-container">
+                                            <!-- Ho suddiviso i tag in 2 parti di modo da dare il justify content -->
+                                            <div class="left-side">
+                                                <!-- La data del feed -->
+                                                <p class="author-date">
+                                                    <span>Oct 10</span>
+                                                    <span class="dot">.</span>
+                                                    <span>8 min read</span>
+                                                    <span class="dot">.</span>
+                                                </p>
+                                                <!-- Il tag del feed -->
+                                                <div class="tag">
+                                                    <p>Writing</p>
+                                                </div>
+                                                <span class="dot">.</span>
+                                                <p>Selected for you</p>
+                                                <span class="dot">.</span>
+                                                <svg width="16" height="16" viewBox="0 0 64 64" fill="none" class="qz afj"><path d="M39.64 40.83L33.87 56.7a1.99 1.99 0 0 1-3.74 0l-5.77-15.87a2.02 2.02 0 0 0-1.2-1.2L7.3 33.88a1.99 1.99 0 0 1 0-3.74l15.87-5.77a2.02 2.02 0 0 0 1.2-1.2L30.12 7.3a1.99 1.99 0 0 1 3.74 0l5.77 15.87a2.02 2.02 0 0 0 1.2 1.2l15.86 5.76a1.99 1.99 0 0 1 0 3.74l-15.87 5.77a2.02 2.02 0 0 0-1.2 1.2z" fill="#FFC017"></path></svg>
+                                                <p class="member">Member-only</p>
+                                            </div>
+                                            <!-- Container delle icone del bookmark e i 3 puntini -->
+                                            <div class="right-side">
+                                                <!-- Container del bookmark -->
+                                                <div class="bookmark-container">
+                                                    <!-- Fontawesome del bookmark -->
+                                                    <i class="fa-regular fa-bookmark fa-bookmark-tag"></i>
+                                                </div>
+                                                <!-- Container dei 3 puntini -->
+                                                <div class="ellipsis-container">
+                                                    <!-- Fontawesome dei 3 puntini -->
+                                                    <i class="fa-solid fa-ellipsis"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Chiusura div del corpus del feed -->
+                                <!-- Container dell'immagine del post -->
+                                <div class="image-feed-container">
+                                    <!-- L'immagine del post -->
+                                    <img src="https://miro.medium.com/v2/resize:fill:224:224/0*L4mvltIRxy0-ynyn" alt="image-feed" class="image-feed" loading="lazy">
+                                </div>
+                            </div>
+                            <!-- Chiusura div del corpus del feed e l'immagine dell'articolo -->
+                        </div>
+                        <!-- Chiusura div che contiene tutto l'articolo e le spaziature dagli altri articoli -->
+    <!-- FINE DEL SINGOLO ARTICOLO DEL FEED -->
+    <!-- INIZIO DEL SINGOLO ARTICOLO DEL FEED -->
+                        <!-- Div che contiene tutto l'articolo e le spaziature dagli altri articoli -->
+                        <div class="article-container">
+                            <!-- Author container contiene l'immagine dell'autore del feed, il suo nome e il suo titolo -->
+                            <div class="author-container">
+                                <!-- Container dell'immagine dell'autore dell'articolo -->
+                                <div class="author-image-container">
+                                    <!-- Immagine autore dell'articolo -->
+                                    <img src="https://miro.medium.com/v2/resize:fill:48:48/1*MAEjyAgXIo3JdTZYPOH12g.jpeg" alt="author-image" class="author-image">
+                                </div>
+                                <!-- Nome dell'autore e il suo titolo -->
+                                <p class="author-name"><span class="bold">Edward Huang</span> in <span class="bold">Better Programming</span></p>
+                            </div>
+                            <!-- Div che contiene il corpus del feed e l'immagine dell'articolo -->
+                            <div class="article">
+                                <!-- Il corpus del feed -->
+                                <div class="feed">
+                                    <!-- Il corpus del feed (solo titolo e descrizione) -->
+                                    <div class="feed-topside">
+                                        <!-- Container del titolo del feed -->
+                                        <div class="feed-title-container">
+                                            <!-- Titolo del feed -->
+                                            <h3 class="feed-title">How To Update Your Status During Standup Like a Senior Engineer</h3>
+                                        </div>
+                                        <!-- Container della descrizione del feed -->
+                                        <!-- Descrizione del feed -->
+                                        <div class="feed-description-container">
+                                            <p class="feed-description">A status update is where you can showcase how well you manage ambiguity and is an important way to build trust with your team —  Imagine this — they assign you a task to finish up this sprint. It is a task that requires you to push a new feature within a brand-new architecture you have never touched on. On the first day, you look through all the documentation on the Confluence page to get…</p>
+                                        </div>
+                                    </div>
+                                    <!-- Corpus del feed (tag in basso al feed) -->
+                                    <div class="feed-bottomside">
+                                        <!-- Container dei tag -->
+                                        <div class="tag-container">
+                                            <!-- Ho suddiviso i tag in 2 parti di modo da dare il justify content -->
+                                            <div class="left-side">
+                                                <!-- La data del feed -->
+                                                <p class="author-date">
+                                                    <span>Oct 20</span>
+                                                    <span class="dot">.</span>
+                                                    <span>9 min read</span>
+                                                    <span class="dot">.</span>
+                                                </p>
+                                                <!-- Il tag del feed -->
+                                                <div class="tag">
+                                                    <p>Software</p>
+                                                </div>
+                                                <span class="dot">.</span>
+                                                <p>Following</p>
+                                                <span class="dot">.</span>
+                                                <svg width="16" height="16" viewBox="0 0 64 64" fill="none" class="qz afj"><path d="M39.64 40.83L33.87 56.7a1.99 1.99 0 0 1-3.74 0l-5.77-15.87a2.02 2.02 0 0 0-1.2-1.2L7.3 33.88a1.99 1.99 0 0 1 0-3.74l15.87-5.77a2.02 2.02 0 0 0 1.2-1.2L30.12 7.3a1.99 1.99 0 0 1 3.74 0l5.77 15.87a2.02 2.02 0 0 0 1.2 1.2l15.86 5.76a1.99 1.99 0 0 1 0 3.74l-15.87 5.77a2.02 2.02 0 0 0-1.2 1.2z" fill="#FFC017"></path></svg>
+                                                <p class="member">Member-only</p>
+                                            </div>
+                                            <!-- Container delle icone del bookmark e i 3 puntini -->
+                                            <div class="right-side">
+                                                <!-- Container del bookmark -->
+                                                <div class="bookmark-container">
+                                                    <!-- Fontawesome del bookmark -->
+                                                    <i class="fa-regular fa-bookmark fa-bookmark-tag"></i>
+                                                </div>
+                                                <!-- Container dei 3 puntini -->
+                                                <div class="ellipsis-container">
+                                                    <!-- Fontawesome dei 3 puntini -->
+                                                    <i class="fa-solid fa-ellipsis"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Chiusura div del corpus del feed -->
+                                <!-- Container dell'immagine del post -->
+                                <div class="image-feed-container">
+                                    <!-- L'immagine del post -->
+                                    <img src="https://miro.medium.com/v2/resize:fill:224:224/0*1G9UFxZl5wVVsT6F" alt="image-feed" class="image-feed" loading="lazy">
+                                </div>
+                            </div>
+                            <!-- Chiusura div del corpus del feed e l'immagine dell'articolo -->
+                        </div>
+                        <!-- Chiusura div che contiene tutto l'articolo e le spaziature dagli altri articoli -->
+    <!-- FINE DEL SINGOLO ARTICOLO DEL FEED -->
+    <!-- INIZIO DEL SINGOLO ARTICOLO DEL FEED -->
+                        <!-- Div che contiene tutto l'articolo e le spaziature dagli altri articoli -->
+                        <div class="article-container">
+                            <!-- Author container contiene l'immagine dell'autore del feed, il suo nome e il suo titolo -->
+                            <div class="author-container">
+                                <!-- Container dell'immagine dell'autore dell'articolo -->
+                                <div class="author-image-container">
+                                    <!-- Immagine autore dell'articolo -->
+                                    <img src="https://miro.medium.com/v2/resize:fill:48:48/1*IL0mnvzNcpG2ZD0JBqo7zQ.jpeg" alt="author-image" class="author-image">
+                                </div>
+                                <!-- Nome dell'autore e il suo titolo -->
+                                <p class="author-name"><span class="bold">Cassie Kozyrkov</span></p>
+                            </div>
+                            <!-- Div che contiene il corpus del feed e l'immagine dell'articolo -->
+                            <div class="article">
+                                <!-- Il corpus del feed -->
+                                <div class="feed">
+                                    <!-- Il corpus del feed (solo titolo e descrizione) -->
+                                    <div class="feed-topside">
+                                        <!-- Container del titolo del feed -->
+                                        <div class="feed-title-container">
+                                            <!-- Titolo del feed -->
+                                            <h3 class="feed-title">Why I quit my job as Google’s Chief Decision Scientist</h3>
+                                        </div>
+                                        <!-- Container della descrizione del feed -->
+                                        <!-- Descrizione del feed -->
+                                        <div class="feed-description-container">
+                                            <p class="feed-description">What’s it like to go from being Chief Decision Scientist at Google to being, well… just me? —  Writing about personal things is unusual for me; most of my blogging has been an effort to make complicated technical concepts simple. But it’s Saturday, let’s celebrate! (By blogging instead of going outside, I guess?) So long, Google, and thanks for all the fish! Just over a month ago, I left my position as Google’s Chief Decision Scientist after…</p>
+                                        </div>
+                                    </div>
+                                    <!-- Corpus del feed (tag in basso al feed) -->
+                                    <div class="feed-bottomside">
+                                        <!-- Container dei tag -->
+                                        <div class="tag-container">
+                                            <!-- Ho suddiviso i tag in 2 parti di modo da dare il justify content -->
+                                            <div class="left-side">
+                                                <!-- La data del feed -->
+                                                <p class="author-date">
+                                                    <span>6 days ago</span>
+                                                    <span class="dot">.</span>
+                                                    <span>7 min read</span>
+                                                    <span class="dot">.</span>
+                                                </p>
+                                                <!-- Il tag del feed -->
+                                                <div class="tag">
+                                                    <p>Careers</p>
+                                                </div>
+                                                <span class="dot">.</span>
+                                                <p>Selected for you</p>
+                                                <span class="dot">.</span>
+                                                <svg width="16" height="16" viewBox="0 0 64 64" fill="none" class="qz afj"><path d="M39.64 40.83L33.87 56.7a1.99 1.99 0 0 1-3.74 0l-5.77-15.87a2.02 2.02 0 0 0-1.2-1.2L7.3 33.88a1.99 1.99 0 0 1 0-3.74l15.87-5.77a2.02 2.02 0 0 0 1.2-1.2L30.12 7.3a1.99 1.99 0 0 1 3.74 0l5.77 15.87a2.02 2.02 0 0 0 1.2 1.2l15.86 5.76a1.99 1.99 0 0 1 0 3.74l-15.87 5.77a2.02 2.02 0 0 0-1.2 1.2z" fill="#FFC017"></path></svg>
+                                                <p class="member">Member-only</p>
+                                            </div>
+                                            <!-- Container delle icone del bookmark e i 3 puntini -->
+                                            <div class="right-side">
+                                                <!-- Container del bookmark -->
+                                                <div class="bookmark-container">
+                                                    <!-- Fontawesome del bookmark -->
+                                                    <i class="fa-regular fa-bookmark fa-bookmark-tag"></i>
+                                                </div>
+                                                <!-- Container dei 3 puntini -->
+                                                <div class="ellipsis-container">
+                                                    <!-- Fontawesome dei 3 puntini -->
+                                                    <i class="fa-solid fa-ellipsis"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Chiusura div del corpus del feed -->
+                                <!-- Container dell'immagine del post -->
+                                <div class="image-feed-container">
+                                    <!-- L'immagine del post -->
+                                    <img src="https://miro.medium.com/v2/resize:fill:224:224/0*RqhVFIqw1rWp7zPa.jpg" alt="image-feed" class="image-feed" loading="lazy">
+                                </div>
+                            </div>
+                            <!-- Chiusura div del corpus del feed e l'immagine dell'articolo -->
+                        </div>
+                        <!-- Chiusura div che contiene tutto l'articolo e le spaziature dagli altri articoli -->
+    <!-- FINE DEL SINGOLO ARTICOLO DEL FEED -->
+    <!-- INIZIO DEL SINGOLO ARTICOLO DEL FEED -->
+                        <!-- Div che contiene tutto l'articolo e le spaziature dagli altri articoli -->
+                        <div class="article-container">
+                            <!-- Author container contiene l'immagine dell'autore del feed, il suo nome e il suo titolo -->
+                            <div class="author-container">
+                                <!-- Container dell'immagine dell'autore dell'articolo -->
+                                <div class="author-image-container">
+                                    <!-- Immagine autore dell'articolo -->
+                                    <img src="https://miro.medium.com/v2/resize:fill:48:48/1*hJQumMLElQwFle2Z-cwsCw.png" alt="author-image" class="author-image">
+                                </div>
+                                <!-- Nome dell'autore e il suo titolo -->
+                                <p class="author-name"><span class="bold">Eve Arnold</span> in <span class="bold">The Startup</span></p>
+                            </div>
+                            <!-- Div che contiene il corpus del feed e l'immagine dell'articolo -->
+                            <div class="article">
+                                <!-- Il corpus del feed -->
+                                <div class="feed">
+                                    <!-- Il corpus del feed (solo titolo e descrizione) -->
+                                    <div class="feed-topside">
+                                        <!-- Container del titolo del feed -->
+                                        <div class="feed-title-container">
+                                            <!-- Titolo del feed -->
+                                            <h3 class="feed-title">How I Run a $5,500+ Per Month Side Hustle Empire in 3 Hours a Day</h3>
+                                        </div>
+                                        <!-- Container della descrizione del feed -->
+                                        <!-- Descrizione del feed -->
+                                        <div class="feed-description-container">
+                                            <p class="feed-description">Yes, 6 am wake ups are part of it —  I never thought I’d have a successful business. For years I jumped from shiny object to shiny object. I fell for every get-rich-quick scheme. I was a wantrepreneur. Today I have a thriving business. This is the exact step-by-step guide I used (steal to get started today): 1. Find a job you like Not what you…</p>
+                                        </div>
+                                    </div>
+                                    <!-- Corpus del feed (tag in basso al feed) -->
+                                    <div class="feed-bottomside">
+                                        <!-- Container dei tag -->
+                                        <div class="tag-container">
+                                            <!-- Ho suddiviso i tag in 2 parti di modo da dare il justify content -->
+                                            <div class="left-side">
+                                                <!-- La data del feed -->
+                                                <p class="author-date">
+                                                    <span>Jul 6</span>
+                                                    <span class="dot">.</span>
+                                                    <span>4 min read</span>
+                                                    <span class="dot">.</span>
+                                                </p>
+                                                <!-- Il tag del feed -->
+                                                <div class="tag">
+                                                    <p>Business</p>
+                                                </div>
+                                                <span class="dot">.</span>
+                                                <p>Selected for you</p>
+                                                <span class="dot">.</span>
+                                                <svg width="16" height="16" viewBox="0 0 64 64" fill="none" class="qz afj"><path d="M39.64 40.83L33.87 56.7a1.99 1.99 0 0 1-3.74 0l-5.77-15.87a2.02 2.02 0 0 0-1.2-1.2L7.3 33.88a1.99 1.99 0 0 1 0-3.74l15.87-5.77a2.02 2.02 0 0 0 1.2-1.2L30.12 7.3a1.99 1.99 0 0 1 3.74 0l5.77 15.87a2.02 2.02 0 0 0 1.2 1.2l15.86 5.76a1.99 1.99 0 0 1 0 3.74l-15.87 5.77a2.02 2.02 0 0 0-1.2 1.2z" fill="#FFC017"></path></svg>
+                                                <p class="member">Member-only</p>
+                                            </div>
+                                            <!-- Container delle icone del bookmark e i 3 puntini -->
+                                            <div class="right-side">
+                                                <!-- Container del bookmark -->
+                                                <div class="bookmark-container">
+                                                    <!-- Fontawesome del bookmark -->
+                                                    <i class="fa-regular fa-bookmark fa-bookmark-tag"></i>
+                                                </div>
+                                                <!-- Container dei 3 puntini -->
+                                                <div class="ellipsis-container">
+                                                    <!-- Fontawesome dei 3 puntini -->
+                                                    <i class="fa-solid fa-ellipsis"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Chiusura div del corpus del feed -->
+                                <!-- Container dell'immagine del post -->
+                                <div class="image-feed-container">
+                                    <!-- L'immagine del post -->
+                                    <img src="https://miro.medium.com/v2/resize:fill:224:224/1*MLgBP7Qe0p8Njzx0B0c57Q.jpeg" alt="image-feed" class="image-feed" loading="lazy">
+                                </div>
+                            </div>
+                            <!-- Chiusura div del corpus del feed e l'immagine dell'articolo -->
+                        </div>
+                        <!-- Chiusura div che contiene tutto l'articolo e le spaziature dagli altri articoli -->
+    <!-- FINE DEL SINGOLO ARTICOLO DEL FEED -->
+    <!-- INIZIO DEL SINGOLO ARTICOLO DEL FEED -->
+                        <!-- Div che contiene tutto l'articolo e le spaziature dagli altri articoli -->
+                        <div class="article-container">
+                            <!-- Author container contiene l'immagine dell'autore del feed, il suo nome e il suo titolo -->
+                            <div class="author-container">
+                                <!-- Container dell'immagine dell'autore dell'articolo -->
+                                <div class="author-image-container">
+                                    <!-- Immagine autore dell'articolo -->
+                                    <img src="https://miro.medium.com/v2/resize:fill:48:48/1*HRgar2NE2lXMHGvV7wH0QA.jpeg" alt="author-image" class="author-image">
+                                </div>
+                                <!-- Nome dell'autore e il suo titolo -->
+                                <p class="author-name"><span class="bold">Mirijam Missbichler</span></p>
+                            </div>
+                            <!-- Div che contiene il corpus del feed e l'immagine dell'articolo -->
+                            <div class="article">
+                                <!-- Il corpus del feed -->
+                                <div class="feed">
+                                    <!-- Il corpus del feed (solo titolo e descrizione) -->
+                                    <div class="feed-topside">
+                                        <!-- Container del titolo del feed -->
+                                        <div class="feed-title-container">
+                                            <!-- Titolo del feed -->
+                                            <h3 class="feed-title">The Nintendo Ads You’ve Never Seen In Your Entire Life</h3>
+                                        </div>
+                                        <!-- Container della descrizione del feed -->
+                                        <!-- Descrizione del feed -->
+                                        <div class="feed-description-container">
+                                            <p class="feed-description">A study of idyllicism, 癒やし (iyashi) & knowing your audience —  If you follow Nintendo of America on YouTube, the lineup above will look familiar to you. On the Japanese side however, things are a bit different. At the time of writing, there are a total of 6 trailers for Super Mario Bros. Wonder (released on October 20) which you…</p>
+                                        </div>
+                                    </div>
+                                    <!-- Corpus del feed (tag in basso al feed) -->
+                                    <div class="feed-bottomside">
+                                        <!-- Container dei tag -->
+                                        <div class="tag-container">
+                                            <!-- Ho suddiviso i tag in 2 parti di modo da dare il justify content -->
+                                            <div class="left-side">
+                                                <!-- La data del feed -->
+                                                <p class="author-date">
+                                                    <span>Jun 21</span>
+                                                    <span class="dot">.</span>
+                                                    <span>7 min read</span>
+                                                    <span class="dot">.</span>
+                                                </p>
+                                                <!-- Il tag del feed -->
+                                                <div class="tag">
+                                                    <p>Games</p>
+                                                </div>
+                                                <span class="dot">.</span>
+                                                <p>Following</p>
+                                                <span class="dot">.</span>
+                                                <svg width="16" height="16" viewBox="0 0 64 64" fill="none" class="qz afj"><path d="M39.64 40.83L33.87 56.7a1.99 1.99 0 0 1-3.74 0l-5.77-15.87a2.02 2.02 0 0 0-1.2-1.2L7.3 33.88a1.99 1.99 0 0 1 0-3.74l15.87-5.77a2.02 2.02 0 0 0 1.2-1.2L30.12 7.3a1.99 1.99 0 0 1 3.74 0l5.77 15.87a2.02 2.02 0 0 0 1.2 1.2l15.86 5.76a1.99 1.99 0 0 1 0 3.74l-15.87 5.77a2.02 2.02 0 0 0-1.2 1.2z" fill="#FFC017"></path></svg>
+                                                <p class="member">Member-only</p>
+                                            </div>
+                                            <!-- Container delle icone del bookmark e i 3 puntini -->
+                                            <div class="right-side">
+                                                <!-- Container del bookmark -->
+                                                <div class="bookmark-container">
+                                                    <!-- Fontawesome del bookmark -->
+                                                    <i class="fa-regular fa-bookmark fa-bookmark-tag"></i>
+                                                </div>
+                                                <!-- Container dei 3 puntini -->
+                                                <div class="ellipsis-container">
+                                                    <!-- Fontawesome dei 3 puntini -->
+                                                    <i class="fa-solid fa-ellipsis"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Chiusura div del corpus del feed -->
+                                <!-- Container dell'immagine del post -->
+                                <div class="image-feed-container">
+                                    <!-- L'immagine del post -->
+                                    <img src="https://miro.medium.com/v2/resize:fill:224:224/0*GWdeVc-ilazb5pMG" alt="image-feed" class="image-feed" loading="lazy">
+                                </div>
+                            </div>
+                            <!-- Chiusura div del corpus del feed e l'immagine dell'articolo -->
+                        </div>
+                        <!-- Chiusura div che contiene tutto l'articolo e le spaziature dagli altri articoli -->
+    <!-- FINE DEL SINGOLO ARTICOLO DEL FEED -->
+    <!-- INIZIO DEL SINGOLO ARTICOLO DEL FEED -->
+                        <!-- Div che contiene tutto l'articolo e le spaziature dagli altri articoli -->
+                        <div class="article-container">
+                            <!-- Author container contiene l'immagine dell'autore del feed, il suo nome e il suo titolo -->
+                            <div class="author-container">
+                                <!-- Container dell'immagine dell'autore dell'articolo -->
+                                <div class="author-image-container">
+                                    <!-- Immagine autore dell'articolo -->
+                                    <img src="https://miro.medium.com/v2/resize:fill:48:48/1*6yURMFxX0qmzjRvfZpR3aQ.jpeg" alt="author-image" class="author-image">
+                                </div>
+                                <!-- Nome dell'autore e il suo titolo -->
+                                <p class="author-name"><span class="bold">Natalia Demianenko</span></p>
+                            </div>
+                            <!-- Div che contiene il corpus del feed e l'immagine dell'articolo -->
+                            <div class="article">
+                                <!-- Il corpus del feed -->
+                                <div class="feed">
+                                    <!-- Il corpus del feed (solo titolo e descrizione) -->
+                                    <div class="feed-topside">
+                                        <!-- Container del titolo del feed -->
+                                        <div class="feed-title-container">
+                                            <!-- Titolo del feed -->
+                                            <h3 class="feed-title">10 Github Repositories for Software Testers and some important suggestions</h3>
+                                        </div>
+                                        <!-- Container della descrizione del feed -->
+                                        <!-- Descrizione del feed -->
+                                        <div class="feed-description-container">
+                                            <p class="feed-description">Software testing is an integral part of the software development process, ensuring that the final product is reliable, bug-free, and meets user expectations. Manual testers play a crucial role in this journey, meticulously evaluating software to identify issues, report defects, and provide valuable feedback. To excel in their roles, testers…</p>
+                                        </div>
+                                    </div>
+                                    <!-- Corpus del feed (tag in basso al feed) -->
+                                    <div class="feed-bottomside">
+                                        <!-- Container dei tag -->
+                                        <div class="tag-container">
+                                            <!-- Ho suddiviso i tag in 2 parti di modo da dare il justify content -->
+                                            <div class="left-side">
+                                                <!-- La data del feed -->
+                                                <p class="author-date">
+                                                    <span>Oct 21</span>
+                                                    <span class="dot">.</span>
+                                                    <span>4 min read</span>
+                                                    <span class="dot">.</span>
+                                                </p>
+                                                <!-- Il tag del feed -->
+                                                <div class="tag">
+                                                    <p>QA</p>
+                                                </div>
+                                                <span class="dot">.</span>
+                                                <p>Following</p>
+                                                <span class="dot">.</span>
+                                                <svg width="16" height="16" viewBox="0 0 64 64" fill="none" class="qz afj"><path d="M39.64 40.83L33.87 56.7a1.99 1.99 0 0 1-3.74 0l-5.77-15.87a2.02 2.02 0 0 0-1.2-1.2L7.3 33.88a1.99 1.99 0 0 1 0-3.74l15.87-5.77a2.02 2.02 0 0 0 1.2-1.2L30.12 7.3a1.99 1.99 0 0 1 3.74 0l5.77 15.87a2.02 2.02 0 0 0 1.2 1.2l15.86 5.76a1.99 1.99 0 0 1 0 3.74l-15.87 5.77a2.02 2.02 0 0 0-1.2 1.2z" fill="#FFC017"></path></svg>
+                                                <p class="member">Member-only</p>
+                                            </div>
+                                            <!-- Container delle icone del bookmark e i 3 puntini -->
+                                            <div class="right-side">
+                                                <!-- Container del bookmark -->
+                                                <div class="bookmark-container">
+                                                    <!-- Fontawesome del bookmark -->
+                                                    <i class="fa-regular fa-bookmark fa-bookmark-tag"></i>
+                                                </div>
+                                                <!-- Container dei 3 puntini -->
+                                                <div class="ellipsis-container">
+                                                    <!-- Fontawesome dei 3 puntini -->
+                                                    <i class="fa-solid fa-ellipsis"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Chiusura div del corpus del feed -->
+                                <!-- Container dell'immagine del post -->
+                                <div class="image-feed-container">
+                                    <!-- L'immagine del post -->
+                                    <img src="https://miro.medium.com/v2/resize:fill:224:224/1*r11Qw7auwEZb2e_-ctsxvg.png" alt="image-feed" class="image-feed" loading="lazy">
+                                </div>
+                            </div>
+                            <!-- Chiusura div del corpus del feed e l'immagine dell'articolo -->
+                        </div>
+                        <!-- Chiusura div che contiene tutto l'articolo e le spaziature dagli altri articoli -->
+    <!-- FINE DEL SINGOLO ARTICOLO DEL FEED -->
+    <!-- INIZIO DEL SINGOLO ARTICOLO DEL FEED -->
+                        <!-- Div che contiene tutto l'articolo e le spaziature dagli altri articoli -->
+                        <div class="article-container">
+                            <!-- Author container contiene l'immagine dell'autore del feed, il suo nome e il suo titolo -->
+                            <div class="author-container">
+                                <!-- Container dell'immagine dell'autore dell'articolo -->
+                                <div class="author-image-container">
+                                    <!-- Immagine autore dell'articolo -->
+                                    <img src="https://miro.medium.com/v2/resize:fill:24:24/1*qAiJOnPDlGIOQOSHj0J53Q.jpeg" alt="author-image" class="author-image">
+                                </div>
+                                <!-- Nome dell'autore e il suo titolo -->
+                                <p class="author-name"><span class="bold">Zach Quinn</span> in <span class="bold">Pipeline: Your Data Engineering Resource</span> </p>
+                            </div>
+                            <!-- Div che contiene il corpus del feed e l'immagine dell'articolo -->
+                            <div class="article">
+                                <!-- Il corpus del feed -->
+                                <div class="feed">
+                                    <!-- Il corpus del feed (solo titolo e descrizione) -->
+                                    <div class="feed-topside">
+                                        <!-- Container del titolo del feed -->
+                                        <div class="feed-title-container">
+                                            <!-- Titolo del feed -->
+                                            <h3 class="feed-title">Am I Doing A Data Science Certificate For The Wrong Reason?</h3>
+                                        </div>
+                                        <!-- Container della descrizione del feed -->
+                                        <!-- Descrizione del feed -->
+                                        <div class="feed-description-container">
+                                            <p class="feed-description">Your LinkedIn might show a lot of data science certificates, but are you actually learning? And will those skills get you a job? —  ZachOverflow is a recurring column in which I attempt to answer one frequently asked data science question thoroughly and honestly. No oversaturated topics. No listicles. No clickbait. Just my (mostly) unfiltered responses based on professional experience, technical exposure and, yes, the occasional unsubstantiated opinion.</p>
+                                        </div>
+                                    </div>
+                                    <!-- Corpus del feed (tag in basso al feed) -->
+                                    <div class="feed-bottomside">
+                                        <!-- Container dei tag -->
+                                        <div class="tag-container">
+                                            <!-- Ho suddiviso i tag in 2 parti di modo da dare il justify content -->
+                                            <div class="left-side">
+                                                <!-- La data del feed -->
+                                                <p class="author-date">
+                                                    <span>Nov 1</span>
+                                                    <span class="dot">.</span>
+                                                    <span>6 min read</span>
+                                                    <span class="dot">.</span>
+                                                </p>
+                                                <!-- Il tag del feed -->
+                                                <div class="tag">
+                                                    <p>Data Science</p>
+                                                </div>
+                                                <span class="dot">.</span>
+                                                <p>Selected for you</p>
+                                                <span class="dot">.</span>
+                                                <svg width="16" height="16" viewBox="0 0 64 64" fill="none" class="qz afj"><path d="M39.64 40.83L33.87 56.7a1.99 1.99 0 0 1-3.74 0l-5.77-15.87a2.02 2.02 0 0 0-1.2-1.2L7.3 33.88a1.99 1.99 0 0 1 0-3.74l15.87-5.77a2.02 2.02 0 0 0 1.2-1.2L30.12 7.3a1.99 1.99 0 0 1 3.74 0l5.77 15.87a2.02 2.02 0 0 0 1.2 1.2l15.86 5.76a1.99 1.99 0 0 1 0 3.74l-15.87 5.77a2.02 2.02 0 0 0-1.2 1.2z" fill="#FFC017"></path></svg>
+                                                <p class="member">Member-only</p>
+                                            </div>
+                                            <!-- Container delle icone del bookmark e i 3 puntini -->
+                                            <div class="right-side">
+                                                <!-- Container del bookmark -->
+                                                <div class="bookmark-container">
+                                                    <!-- Fontawesome del bookmark -->
+                                                    <i class="fa-regular fa-bookmark fa-bookmark-tag"></i>
+                                                </div>
+                                                <!-- Container dei 3 puntini -->
+                                                <div class="ellipsis-container">
+                                                    <!-- Fontawesome dei 3 puntini -->
+                                                    <i class="fa-solid fa-ellipsis"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Chiusura div del corpus del feed -->
+                                <!-- Container dell'immagine del post -->
+                                <div class="image-feed-container">
+                                    <!-- L'immagine del post -->
+                                    <img src="https://miro.medium.com/v2/resize:fill:224:224/0*owHlk3foZZ7ebyn3" alt="image-feed" class="image-feed" loading="lazy">
+                                </div>
+                            </div>
+                            <!-- Chiusura div del corpus del feed e l'immagine dell'articolo -->
+                        </div>
+                        <!-- Chiusura div che contiene tutto l'articolo e le spaziature dagli altri articoli -->
+    <!-- FINE DEL SINGOLO ARTICOLO DEL FEED -->
+                    </div>
+    <!-- FINE DEL FEED -->
+                </main>
+    <!-- FINE LATO SINISTRO DELLA HOMEPAGE -->
+
+    <!-- INIZIO LATO DESTRO DELLA HOMEPAGE -->
+                <!-- INIZIO Container che assegna il width complessivo e la riga in mezzo alla homepage -->
+                <div class="main-rightside">
+                    <!-- Contiene la regola display flex e flex direction column, di modo che tutti i figli ereditano questa regola -->
+                    <div class="rightside-container">
+    <!-- INIZIO CONTAINER DI MEDIUM + TWITTER -->
+                        <!-- Container che contiene l'invito a collegare Medium a twitter -->
+                        <div class="connect-container">
+                            <!-- Ho dovuto creare un container solo per la linea bottom -->
+                            <div class="connect-container-underline">
+                                <!-- Container dei due logo -->
+                                <div class="twitter-container">
+                                    <!-- Container del logo di medium -->
+                                    <div class="medium-logo-container">
+                                        <!-- Logo di medium -->
+                                        <img src="https://github.com/CodeKaito/Epicode-task-4/blob/main/assets/medium-logo.png?raw=true" alt="medium-logo" class="medium-logo">
+                                    </div>
+                                    <!-- Fontawesome del "+" -->
+                                    <i class="fa-solid fa-plus"></i>
+                                    <!-- Container del logo di twitter -->
+                                    <div class="twitter-logo-container">
+                                        <!-- Logo di twitter -->
+                                        <img src="https://about.twitter.com/content/dam/about-twitter/x/brand-toolkit/logo-black.png.twimg.1920.png" alt="twitter-logo" class="twitter-logo">
+                                    </div>
+                                </div>
+                                
+                                <!-- Container della descrizione del container di medium + twitter -->
+                                <div class="title-twitter-container">
+                                    <!-- Descrizione del container di medium + twitter -->
+                                    <p>Discover Medium writers you already follow on Twitter.</p>
+                                </div>
+                                <!-- Container del pulsante Connect to twitter che contiene logo + scritta -->
+                                <div class="button-twitter-container">
+                                    <!-- Container del logo di twitter -->
+                                    <div class="twitter-logo-container">
+                                        <!-- Logo di twitter -->
+                                        <img src="https://about.twitter.com/content/dam/about-twitter/x/brand-toolkit/logo-black.png.twimg.1920.png" alt="twitter-logo" class="twitter-logo twitter-inside-container">
+                                    </div>
+                                    <!-- Scritta Connect to Twitter -->
+                                    <p>Connect to Twitter</p>
+                                    <!-- Il justify content space between mi mandava troppo a destra il messaggio Connect to twitter, quindi ho aggiunto un blocco a destra per compensare quello a sinistra -->
+                                    <div class="block"></div>
+                                </div>
+                                <!-- Pulsante maybe later -->
+                                <p class="later-button">Maybe later</p>
+                            </div>
+                        </div>
+    <!-- FINE CONTAINER DI MEDIUM + TWITTER -->
+    <!-- INIZIO CONTAINER RECOMMEND TOPICS -->
+                        <!-- Container del recommend topics section -->
+                        <div class="recommended-container">
+                            <!-- Container del titolo di recommend topics -->
+                            <div class="recommended-title-container">
+                                <!-- Titolo di recommend topics -->
+                                <h4>Recommended Topics</h4>
+                            </div>
+                            <!-- Tutti i tag del container -->
+                            <div class="tags-container">
+                                <div class="tags">Technlogy</div>
+                                <div class="tags">Programming</div>
+                                <div class="tags">Web Development</div>
+                                <div class="tags">Software Engineer</div>
+                                <div class="tags">Self Improvement</div>
+                                <div class="tags">Passive Income</div>
+                            </div>
+                            <!-- Container del see more topics -->
+                            <div class="see-more-container">
+                                <p>See more topics</p>
+                            </div>
+                        </div>
+    <!-- FINE CONTAINER RECOMMEND TOPICS -->
+    <!-- INIZIO CONTAINER WHO TO FOLLOW -->
+                        <!-- Container del who to follow -->
+                        <div class="follow-container">
+                            <!-- Container del titolo who to follow -->
+                            <div class="follow-container-title">
+                                <!-- Titolo who to follow -->
+                                <h4>Who to follow</h4>
+                            </div>
+    <!-- INIZIO SINGOLO CONTAINER UTENTE DA FOLLOWARE -->
+                            <!-- Container del singolo utente da followare -->
+                            <div class="user-follow-container">
+                                <!-- Container dell'immagine dell'utente da followare -->
+                                <div class="user-image-follow-container">
+                                    <!-- Immagine dell'utente da followare -->
+                                    <img src="https://miro.medium.com/v2/resize:fill:112:112/g:fp:0.5:0.49/1*t5xNeToPCdxXrBbUjfTuNQ.jpeg" alt="user-image-follow" class="user-image-follow-container">
+                                </div>
+                                <!-- Container delle informazioni dell'utente da followare -->
+                                <div class="user-informations-follow-container">
+                                    <!-- Nome e Cognome dell'utente da followare -->
+                                    <h4 class="user-information-name">Elon Musk</h4>
+                                    <!-- Descrizione dell'utente da followare -->
+                                    <p class="user-information-description">CEO @Tesla&Space-X and Ex-CEO of Paypal</p>
+                                </div>
+                                <!-- Pulsante follow -->
+                                <button class="follow-button">Follow</button>    
+                            </div>
+    <!-- FINE SINGOLO CONTAINER UTENTE DA FOLLOWARE -->
+    <!-- INIZIO SINGOLO CONTAINER UTENTE DA FOLLOWARE -->
+                            <!-- Container del singolo utente da followare -->
+                            <div class="user-follow-container">
+                                <!-- Container dell'immagine dell'utente da followare -->
+                                <div class="user-image-follow-container">
+                                    <!-- Immagine dell'utente da followare -->
+                                    <img src="https://assets.bbhub.io/dotorg/sites/64/2023/09/BillGates-Headshot-2022.jpg" alt="user-image-follow" class="user-image-follow-container">
+                                </div>
+                                <!-- Container delle informazioni dell'utente da followare -->
+                                <div class="user-informations-follow-container">
+                                    <!-- Nome e Cognome dell'utente da followare -->
+                                    <h4 class="user-information-name">Bill Gates</h4>
+                                    <!-- Descrizione dell'utente da followare -->
+                                    <p class="user-information-description">Ex-CEO di Microsoft</p>
+                                </div>
+                                <!-- Pulsante follow -->
+                                <button class="follow-button">Follow</button>    
+                            </div>
+    <!-- FINE SINGOLO CONTAINER UTENTE DA FOLLOWARE -->
+    <!-- INIZIO SINGOLO CONTAINER UTENTE DA FOLLOWARE -->
+                            <!-- Container del singolo utente da followare -->
+                            <div class="user-follow-container">
+                                <!-- Container dell'immagine dell'utente da followare -->
+                                <div class="user-image-follow-container">
+                                    <!-- Immagine dell'utente da followare -->
+                                    <img src="https://hips.hearstapps.com/hmg-prod/images/gettyimages-83414114.jpg" alt="user-image-follow" class="user-image-follow-container">
+                                </div>
+                                <!-- Container delle informazioni dell'utente da followare -->
+                                <div class="user-informations-follow-container">
+                                    <!-- Nome e Cognome dell'utente da followare -->
+                                    <h4 class="user-information-name">Larry Page</h4>
+                                    <!-- Descrizione dell'utente da followare -->
+                                    <p class="user-information-description">Ex-CEO di Google</p>
+                                </div>
+                                <!-- Pulsante follow -->
+                                <button class="follow-button">Follow</button>    
+                            </div>
+    <!-- FINE SINGOLO CONTAINER UTENTE DA FOLLOWARE -->
+        <!-- INIZIO SINGOLO CONTAINER UTENTE DA FOLLOWARE -->
+                            <!-- Container del singolo utente da followare -->
+                            <div class="user-follow-container">
+                                <!-- Container dell'immagine dell'utente da followare -->
+                                <div class="user-image-follow-container">
+                                    <!-- Immagine dell'utente da followare -->
+                                    <img src="https://public.bnbstatic.com/image/pgc/202307/bca28c9c8987e3d5c0971bc2b3ceaa11.jpg" alt="user-image-follow" class="user-image-follow-container">
+                                </div>
+                                <!-- Container delle informazioni dell'utente da followare -->
+                                <div class="user-informations-follow-container">
+                                    <!-- Nome e Cognome dell'utente da followare -->
+                                    <h4 class="user-information-name">Changpeng Zhao</h4>
+                                    <!-- Descrizione dell'utente da followare -->
+                                    <p class="user-information-description">CEO di Binance</p>
+                                </div>
+                                <!-- Pulsante follow -->
+                                <button class="follow-button">Follow</button>    
+                            </div>
+    <!-- FINE SINGOLO CONTAINER UTENTE DA FOLLOWARE -->
+                            <!-- Container del see more suggestions -->
+                            <div class="see-more-container">
+                                <!-- Descrizione del see more suggestions -->
+                                <p>See more suggestions</p>
+                            </div>
+                        </div>
+    <!-- FINE CONTAINER WHO TO FOLLOW -->
+    <!-- INIZIO CONTAINER RECENTLY SAVED-->
+                        <!-- Container del recently saved -->
+                        <div class="recently-saved-container">
+                            <!-- Container del titolo recently saved -->
+                            <div class="recently-saved-title">
+                                <!-- Titolo recently saved -->
+                                <h4>Recently saved</h4>
+                            </div>
+    <!-- INIZIO SINGOLO CONTAINER DEL POST SALVATO -->
+                            <!-- Container del singolo post salvato -->
+                            <div class="recently-saved-card">
+                                <!-- Parte alta del singolo post con immagine del post e titolo del post -->
+                                <div class="recently-saved-card-top">
+                                    <!-- Container dell'immagine della card -->
+                                    <div class="card-image">
+                                        <!-- Immagine della card -->
+                                        <img src="https://miro.medium.com/v2/resize:fill:40:40/1*yUNfohs9jA6GCDmyCYJTvA@2x.png" alt="hero-img" class="card-image">
+                                    </div>
+                                    <!-- Titolo del post -->
+                                    <p><span class="bold">Hero</span> in <span class="bold">Javascript in Plain English</span></p>
+                                </div>
+                                <!-- Parte bassa del singolo post con la descrizione del post -->
+                                <div class="recently-saved-card-bottom">
+                                    <!-- Container della descrizione del post -->
+                                    <div class="recently-saved-card-bottom-description">
+                                        <!-- Descrizione del post -->
+                                        <h3>Best VSCode Extensions That Every Developer Should Have (10x Productivity)
+                                            Jun 1
+                                        </h3>
+                                    </div>
+                                    <!-- Data del post -->
+                                    <p>Jun 1 <span class="dot">.</span> 7 min read</p>
+                                </div>
+                            </div>
+    <!-- FINE SINGOLO CONTAINER DEL POST SALVATO -->
+    <!-- INIZIO SINGOLO CONTAINER DEL POST SALVATO -->
+                            <!-- Container del singolo post salvato -->
+                            <div class="recently-saved-card">
+                                <!-- Parte alta del singolo post con immagine del post e titolo del post -->
+                                <div class="recently-saved-card-top">
+                                    <!-- Container dell'immagine della card -->
+                                    <div class="card-image">
+                                        <!-- Immagine della card -->
+                                        <img src="https://miro.medium.com/v2/resize:fill:40:40/1*bWAVaFQmpmU6ePTjNIje_A.jpeg" alt="hero-img" class="card-image">
+                                    </div>
+                                    <!-- Titolo del post -->
+                                    <p><span class="bold">Rahul Kapoor</span> in <span class="bold">Geek Culture</span></p>
+                                </div>
+                                <!-- Parte bassa del singolo post con la descrizione del post -->
+                                <div class="recently-saved-card-bottom">
+                                    <!-- Container della descrizione del post -->
+                                    <div class="recently-saved-card-bottom-description">
+                                        <!-- Descrizione del post -->
+                                        <h3>System Design — Scaling from Zero to Millions Of Users</h3>
+                                    </div>
+                                    <!-- Data del post -->
+                                    <p>Jan 2 <span class="dot">.</span> 2 min read</p>
+                                </div>
+                            </div>
+    <!-- FINE SINGOLO CONTAINER DEL POST SALVATO -->
+                            <!-- Container del see all (n) -->
+                            <div class="see-more-container">
+                                <p>See all (2)</p>
+                            </div>
+                        </div>
+    <!-- FINE CONTAINER RECENTLY SAVED-->
+    <!-- INIZIO FOOTER CON TUTTE LE DIDASCALIE -->
+                        <div class="footer">
+                            <div>
+                                <p>Help</p>
+                            </div>
+                            <div>
+                                <p>Status</p>
+                            </div>
+                            <div>
+                                <p>Writers</p>
+                            </div>
+                            <div>
+                                <p>Blog</p>
+                            </div>
+                            <div>
+                                <p>Careers</p>
+                            </div>
+                            <div>
+                                <p>Privacy</p>
+                            </div>
+                            <div>
+                                <p>Terms</p>
+                            </div>
+                            <div>
+                                <p>About</p>
+                            </div>
+                        </div>
+    <!-- FINE FOOTER CON TUTTE LE DIDASCALIE -->
+                    </div>
+                    <!-- FIne del rightside-container che contiene la regola display flex e flex direction column, di modo che tutti i figli ereditano questa regola-->
+                </div>
+                <!-- FINE Container che assegna il width complessivo e la riga in mezzo alla homepage -->
+    <!-- FINE LATO DESTRO DELLA HOMEPAGE -->
+            </div>
+            <!-- FIne della homepage che racchiude la regola di spaziatura dei componenti di destra e sinistra con un display flex e justify content space-evenly -->
+        </div>
+    <!-- FINE DEL CORPO DELLA HOMEPAGE -->
+    </div>
+
+</body>
+</html>
