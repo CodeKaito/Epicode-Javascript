@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin-top: 30vh;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.main-container {
+    text-align: center;
+}
+
+.title {
+    font-size: 80px;
+    font-weight: 100;
+}
+
+.subtitle {
+    font-size: 30px;
+    font-weight: 50;
+    margin-bottom: 30px;
+}
+
+label {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+input {
+    font-size: 20px;
+    margin-top: 10px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    height: 30px;
+    border-bottom: 1px solid #0A66C2;
+    text-align: center;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+    border-bottom: 1.5px solid #16437E;
+}
+
+input::placeholder {
+    font-style: italic;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.button{
+    margin-top: 30px;
+    align-items: center;
+    border: 0;
+    border-radius: 100px;
+    box-sizing: border-box;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-flex;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    max-width: 480px;
+    min-height: 40px;
+    overflow: hidden;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    touch-action: manipulation;
+    transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+}
+
+#cerca {
+    background-color: #0A66C2;
+}
+
+#clear {
+    width: 100px;
+    background-color: #c20a0a;
+}
+
+.button:hover,
+.button:focus { 
+  color: #ffffff;
+}
+
+#cerca:hover,
+#cerca:focus {
+    background-color: #16437E;
+}
+
+#clear:hover,
+#clear:focus {
+    background-color: #7e1616;
+}
+
+
+.button:active {
+    background: #09223b;
+    color: rgb(255, 255, 255, .7);
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+    cursor: pointer;
+}
+
+.result {
+    margin-top: 20px;
+}
+
+.result-table {
+    margin-top: 20px;
+    margin-bottom: 20vh;
+    border-collapse: collapse;
+    width: 70%;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.result-table th, .result-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.result-table th {
+    background-color: #f2f2f2;
+}
+
+td:hover {
+    font-weight: 700;
+    cursor: pointer;
+}
