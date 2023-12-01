@@ -1,0 +1,315 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+    padding: 15px;
+    display: flex;
+}
+
+.logo-container {
+    padding: 12px;
+    height: 26px;
+    width: 26px;
+}
+
+.logo {
+    height: 100%;
+}
+
+.homepage-container {
+    height: 50px;
+    width: 120px;
+    background-color: #0c0c0c;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.esplora-container {
+    height: 50px;
+    width: 90px;
+    background-color: #ffffff;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.crea-container {
+    height: 50px;
+    width: 70px;
+    background-color: #ffffff;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cerca-container {
+    height: 50px;
+    width: 1350px;
+    margin-left: 10px;
+    background-color: #E1E1E1;
+    border-radius: 30px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.bell-container {
+    height: 50px;
+    width: 50px;
+    margin-left: 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.message-container {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.user-container {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.bell-container:hover {
+    background-color: #E9E9E9;
+}
+
+.message-container:hover {
+    background-color: #E9E9E9;
+}
+
+.user-container:hover {
+    background-color: #E9E9E9;
+}
+
+.homepage-container > p {
+    color: white;
+}
+
+.esplora-container > p {
+    cursor: pointer;
+}
+
+.crea-container > p {
+    cursor: pointer;
+}
+
+.input-cerca {
+    height: 30px;
+    width: 600px;
+    margin-left: 45px;
+    background-color: #E1E1E1;
+    border: none;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+.cerca-container > i {
+    top: 35%;
+    left: 0;
+    margin-left: 17px;
+    color:#5f5f5f;
+    position: absolute;
+    visibility: visible;
+}
+
+.input-cerca:focus {
+    transform: translateX(-20px);
+    transition: transform 0.01s;
+}
+
+.input-cerca:focus + .glass{
+    visibility: hidden;
+}
+
+.bell-container > i {
+    color:#5f5f5f;
+    font-size: 22px;
+}
+
+.message-container > i {
+    color:#5f5f5f;
+    font-size: 22px;
+}
+
+.user-container > img{
+    height: 50%;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+.homepage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    width: max-content;
+    height: 400px;
+    position: relative;
+    margin: 20px;
+    overflow: hidden;
+}
+
+.image {
+    height: 100%;
+    border-radius: 20px;
+}
+
+.image:hover {
+    filter: brightness(50%);
+    cursor: pointer;
+}
+
+.save-container {
+    position: absolute;
+    top: -10%;
+    right: 4%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.save-container > button {
+    height: 50px;
+    width: 80px;
+    background-color: #AD0A1B;
+    border-radius: 30px;
+    border: none;
+    color: white;
+}
+
+.save {
+    color: white;
+    font-weight: 600;
+}
+
+.link-container {
+    height: 7%;
+    width: 60%;
+    position: absolute;
+    bottom: -10%;
+    left: 4%;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255,255,255, 0.7);
+
+}
+
+.link-container > span {
+    margin-right: 5px;
+}
+
+.button2-container {
+    height: 7%;
+    width: 11%;
+    position: absolute;
+    bottom: -10%;
+    right: 4%;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255,255,255, 0.7);
+
+}
+
+.button1-container {
+    height: 7%;
+    width: 11%;
+    position: absolute;
+    bottom: -10%;
+    right: 18%;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255,255,255, 0.7);
+}
+
+.show-when-hover {
+    pointer-events:none;
+    visibility: hidden;
+}
+
+.image:hover + .show-when-hover > .save-container {
+    pointer-events:none;
+    visibility: visible;
+    transform: translateY(50px);
+    transition: transform 0.2s ease-in;
+}
+
+.image:hover + .show-when-hover > .link-container {
+    pointer-events:none;
+    visibility: visible;
+    transform: translateY(-50px);
+    transition: transform 0.2s ease-in;
+}
+
+.image:hover + .show-when-hover > .button1-container {
+    pointer-events:none;
+    visibility: visible;
+    transform: translateY(-50px);
+    transition: transform 0.2s ease-in;
+}
+
+.image:hover + .show-when-hover > .button2-container {
+    pointer-events:none;
+    visibility: visible;
+    transform: translateY(-50px);
+    transition: transform 0.2s ease-in;
+}
+
+@media only screen and (max-width: 1100px) {
+    .homepage-container {
+        display: none;
+    }
+    .esplora-container {
+        display: none;
+    }
+    .crea-container {
+        display: none;
+    }
+    .bell-container {
+        display: none;
+    }
+    .message-container {
+        display: none;
+    }
+    .user-container > img {
+        margin-left: 10px;
+        height: 100%;
+    }
+}

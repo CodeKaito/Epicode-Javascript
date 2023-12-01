@@ -1,0 +1,289 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+.banner-container {
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-container > p {
+    font-size: smaller;
+    color: #272727;
+}
+
+.navbar-container {
+    height: 40px;
+    background-color: #434344;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    filter: opacity(95%);
+}
+
+nav {
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+nav > p {
+    color: aliceblue;
+    font-weight: 300;
+    font-size: small;
+    cursor: pointer;
+}
+
+nav > svg {
+    fill: aliceblue;
+    cursor: pointer;
+}
+
+.title-container-superior {
+    display: flex;
+    justify-content: center;
+    height: 30vh;
+}
+
+.title-container {
+    padding: 40px;
+    text-align: center;
+}
+
+.title-container > h1 {
+    font-size: 80px;
+    color: #1D1D1F;
+}
+
+.title-container > p {
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.title-container > p:hover {
+    text-decoration: underline;
+}
+
+.firstImage-container {
+    height: 600px;
+    background-image: url('https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/ase-hero-202311_GEO_IT?wid=4098&hei=1294&fmt=jpeg&qlt=90&.v=1698958262763');
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.secondImage-container {
+    margin-top: 10px;
+    height: 500px;
+    background-image: url("https://www.apple.com/v/home/bf/images/heroes/iphone-15-pro/hero_iphone15pro__i70z9oz3hj2i_largetall.jpg");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.title-container-secondImage {
+    color: #F5F5F7;
+    text-align: center;
+    padding-top: 60px;
+}
+
+.title-container-secondImage > h1 {
+    font-size: 80px;
+}
+
+.title-container-secondImage > h2 {
+    font-size: 40px;
+}
+
+.items-container {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.item1-container {
+    flex: 50%;
+    height: 570px;
+    background-image: url("https://www.apple.com/v/home/bf/images/promos/iphone-15/promo_iphone15_announce__fmxxi8r9fkuy_large_2x.jpg");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    margin: 6px;
+}
+
+.items {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.items > h1 {
+    font-size: 40px;
+}
+
+.items > h2 {
+    margin-top: 5px;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.items > p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+
+.items > a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #0166CC;
+}
+
+.items-details > a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #0166CC;
+}
+
+.items > a:hover {
+    text-decoration: underline;
+}
+
+.items-details > a:hover {
+    text-decoration: underline;
+}
+
+.item2-container {
+    flex: 50%;
+    height: 570px;
+    background-image: url("https://www.apple.com/v/home/bf/images/promos/macbook-pro-14-and-16/promo_mbp__ek7p477bkp6q_large_2x.jpg");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    margin: 6px;
+}
+
+.item3-title-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.item3-title {
+    height: 60px;
+    width: 150px;
+    background-image: url("https://www.apple.com/v/home/bf/images/logos/apple-watch-ultra-2/promo_logo_apple_watch_ultra2__ggg2x39rsvqu_large.png");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: fill; /* Resize the background image to cover the entire container */
+}
+
+.item3-container {
+    flex: 50%;
+    height: 570px;
+    background-image: url("https://www.apple.com/it/home/includes/promos/apple-watch-ultra-2/promo_apple_watch_ultra2_order__dyxqj5ia98om_large_2x.jpg");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+#items3 {
+    padding: 0 !important;
+}
+
+.item4-container {
+    flex: 50%;
+    height: 570px;
+    background-image: url("https://www.apple.com/v/home/bf/images/promos/airpods-pro/promo_airpods_pro_order__d8xv36p4uwae_large_2x.jpg");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    margin: 6px;
+}
+
+#items4 {
+    color: #F5F5F7;
+}
+
+.item5-container {
+    flex: 50%;
+    height: 570px;
+    background-image: url("https://www.macitynet.it/wp-content/uploads/2022/08/migliori-accessori-iphone.jpg");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    margin: 6px;
+}
+
+.items-details {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.comment-container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.comment-section {
+    display: flex;
+    justify-content: center;
+}
+
+#commentField {
+    font-family: 'Roboto', sans-serif;;
+    width: 900px;
+    padding: 15px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#commentField:focus {
+    outline: none;
+    border-color: #0070c9;
+}
+
+#commentLabel {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+#submitComment {
+    margin-top: 20px;
+    height: 50px;
+    background-color: #0070c9;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#submitComment:hover {
+  background-color: #004d80;
+}
+
+footer {
+    background-color: #eeeeee;
+    color: rgb(58, 58, 58);
+    text-align: center;
+    padding: 10px;
+}
