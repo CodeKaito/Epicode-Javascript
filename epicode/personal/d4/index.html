@@ -6,10 +6,51 @@
     <title>Document</title>
 </head>
 <body>
+    <main>
+        <form id="todoForm">
+            <!-- Your form fields go here -->
+            <label for="todo">What to do?</label>
+            <input type="text" id="todo" name="todo" required>
+    
+            <input type="submit" value="Add a task">
+        </form>
+    </main>
     <script>
-        var result =  % 2;
-    	72 % 2 === result ? console.log('Even') : console.log('Odd');
-        console.log(result);
+        const newTasks = [];
+        const doneTasks = [];
+        const deletedTasks = [];
+
+        const addTask = (task) => {
+            const paragraph = document.createElement("p");
+            paragraph.classList.add('task');
+            paragraph.style.cursor = 'pointer';
+            paragraph.dataset.status = 'new';
+            newTasks.push(paragraph);
+            paragraph.textContent = task;
+            document.body.appendChild(paragraph);
+        }
+
+        document.getElementById("todoForm").addEventListener("submit", (event) => {
+            event.preventDefault();
+            const inputValue = document.getElementById("todo").value;
+            addTask(inputValue);
+        });
+
+        document.addEventListener("click", (event) => {
+            const target = event.target;
+            if (target.classList.contains('task')) {
+                const status = target.dataset.status;
+
+            if (status === 'new') {
+                target.style.textDecoration = 'line-through';
+                target.dataset.status = 'done';
+                doneTasks.push(target);
+            } else if (status === 'done') {
+                target.remove();
+                deletedTasks.push(target);
+            }
+        }
+    }); 
     </script>
 </body>
 </html>
